@@ -1,0 +1,380 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --ivory: #F7F3ED;
+  --charcoal: #242522;
+  --forest: #244B3D;
+  --muted-green: #8FA99B;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: var(--ivory);
+  color: var(--charcoal);
+}
+
+.landing-page {
+  min-height: 100vh;
+  background: var(--ivory);
+  overflow: hidden;
+}
+
+/* HEADER */
+
+.landing-header {
+  height: 70px;
+  width: 100%;
+  padding: 0 5.5%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  background: var(--ivory);
+  box-shadow: 0 3px 12px rgba(36, 37, 34, 0.08);
+  position: relative;
+  z-index: 5;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  justify-self: start;
+  gap: 7px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  white-space: nowrap;
+}
+
+.brand-line {
+  width: 2px;
+  height: 26px;
+  background: var(--forest);
+}
+
+/* CENTRED NAVIGATION */
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 48px;
+}
+
+.nav-links a,
+.admin-link {
+  color: var(--charcoal);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  padding-bottom: 7px;
+  border-bottom: 1px solid var(--muted-green);
+  white-space: nowrap;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  justify-self: end;
+  gap: 17px;
+}
+
+.login-link,
+.signup-link {
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 10px 19px;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+
+.login-link {
+  color: var(--forest);
+  border: 1px solid var(--muted-green);
+}
+
+.signup-link {
+  color: white;
+  background: var(--forest);
+  box-shadow: 0 3px 8px rgba(36, 75, 61, 0.18);
+}
+
+.admin-link {
+  margin-left: 20px;
+}
+
+/* HERO SECTION */
+
+.landing-hero {
+  min-height: calc(100vh - 70px);
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.hero-content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 73px 20px 60px;
+  position: relative;
+  z-index: 2;
+}
+
+/* STUDENT LABEL */
+
+.hero-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 27px;
+  margin-bottom: 23px;
+}
+
+.hero-label strong {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.hero-label span {
+  width: 54px;
+  height: 2px;
+  background: var(--muted-green);
+}
+
+/* PROJECT CATALOG TITLE */
+
+.hero-title {
+  margin: 0;
+  padding: 3px 19px 7px;
+  font-size: clamp(46px, 4.5vw, 64px);
+  line-height: 1.12;
+  font-weight: 700;
+  letter-spacing: -1.8px;
+  color: var(--charcoal);
+  background: rgba(255, 255, 255, 0.45);
+  border-radius: 19px;
+  box-shadow:
+    0 5px 12px rgba(36, 37, 34, 0.13),
+    inset 0 2px 5px rgba(255, 255, 255, 0.75);
+}
+
+.title-accent {
+  color: var(--forest);
+  font-weight: 700;
+}
+
+/* SUBTITLE */
+
+.hero-description {
+  margin: 16px 0 0;
+  max-width: 750px;
+  color: #4A4B46;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.6;
+  text-align: center;
+}
+
+/* GET STARTED BUTTON */
+
+.get-started {
+  margin-top: 36px;
+  height: 42px;
+  min-width: 124px;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: var(--forest);
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(36, 75, 61, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.get-started:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(36, 75, 61, 0.25);
+}
+
+/* DECORATIVE CLAY ICONS */
+
+.floating-icon {
+  position: absolute;
+  width: 105px;
+  height: 105px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--ivory);
+  color: var(--forest);
+  border-radius: 20px;
+  font-weight: 700;
+  box-shadow:
+    0 8px 20px rgba(36, 37, 34, 0.10),
+    inset 0 2px 5px rgba(255, 255, 255, 0.7);
+}
+
+.icon-code {
+  top: 42px;
+  left: 10%;
+  font-size: 39px;
+  transform: rotate(10deg);
+}
+
+.icon-square {
+  top: 55px;
+  right: 10%;
+  font-size: 65px;
+  transform: rotate(35deg);
+}
+
+.icon-command {
+  bottom: 12%;
+  left: 10%;
+  font-size: 65px;
+  transform: rotate(-8deg);
+}
+
+.icon-star {
+  bottom: 10%;
+  right: 10%;
+  font-size: 61px;
+  transform: rotate(10deg);
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .landing-header {
+    padding: 0 3%;
+  }
+
+  .nav-links {
+    gap: 25px;
+  }
+
+  .nav-actions {
+    gap: 9px;
+  }
+
+  .admin-link {
+    margin-left: 8px;
+  }
+
+  .floating-icon {
+    width: 85px;
+    height: 85px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .landing-header {
+    height: auto;
+    min-height: 70px;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 18px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-actions {
+    gap: 8px;
+  }
+
+  .hero-content {
+    padding: 85px 16px 60px;
+  }
+
+  .hero-title {
+    font-size: clamp(38px, 9vw, 54px);
+    letter-spacing: -1.5px;
+  }
+
+  .hero-description {
+    max-width: 90%;
+    font-size: 15px;
+  }
+
+  .floating-icon {
+    width: 72px;
+    height: 72px;
+    border-radius: 15px;
+  }
+
+  .icon-code {
+    left: 4%;
+    top: 25px;
+    font-size: 28px;
+  }
+
+  .icon-square {
+    right: 4%;
+    top: 35px;
+    font-size: 45px;
+  }
+
+  .icon-command {
+    left: 4%;
+    bottom: 8%;
+    font-size: 43px;
+  }
+
+  .icon-star {
+    right: 4%;
+    bottom: 7%;
+    font-size: 42px;
+  }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 420px) {
+  .brand {
+    font-size: 10px;
+  }
+
+  .login-link,
+  .signup-link {
+    padding: 8px 11px;
+    font-size: 11px;
+  }
+
+  .admin-link {
+    display: none;
+  }
+
+  .hero-title {
+    font-size: 37px;
+    padding: 7px 12px;
+  }
+
+  .hero-label {
+    gap: 15px;
+  }
+
+  .hero-label span {
+    width: 35px;
+  }
+}
